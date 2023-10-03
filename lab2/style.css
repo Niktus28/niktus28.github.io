@@ -107,6 +107,17 @@ select:focus{
 }
 
 
+.btn-radio{
+    display:inline-block;
+    border:solid 1px dimgrey;
+    border-radius:5px;
+    padding:5px;
+}
+
+.radio:focus + .btn-radio{
+    border:solid 1px rgb(0, 200, 255);
+}
+
 .radio{
     outline:none;
 
