@@ -7,6 +7,7 @@ h1{
     font-style: italic;
     color:rgb(162, 91, 56);
 }
+
 header{
     background-color:rgb(249, 140, 86);
     padding: 30px 0;
@@ -16,15 +17,20 @@ header{
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 } 
-
-.main-menu li {
-    display: inline;
-    margin-right: 10px;   
-}
 
 .main-menu a{
     color: white;
+    text-decoration: none;
+}
+
+.main-menu a.active{
+    color: rgb(162, 91, 56);
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -37,15 +43,24 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size:17px;
     margin: 0;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
 }
 
 main{
     padding: 30px 0;
+    flex-grow: 1;
 }
 
 .container{
     max-width: 90%;
     margin: 0 auto;
+}
+
+a:hover{
+    color: rgb(162, 91, 56);
+    transition: 0.3s;
 }
 
 img{
@@ -66,6 +81,7 @@ table {
 table, th, td {
     border : 1px solid rgb(162, 91, 56);  
 }
+
 thead h2{
     margin: 0;
 }
@@ -74,20 +90,76 @@ th, td{
     text-align: center;
     padding: 15px;
 }
+
 /* подвальчик */
 .footer{
     padding: 10px 10px 10px 50px;
     background-color: black;
 }
-.footer p, a{
+
+.footer p {
     display: inline-block;
     font-size: 20px;
     color: white;
 }
+
 .footer a{
     text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    color: white;
 }
 
 .footer a:hover{
     color:rgb(249, 140, 86);
+}
+
+/*медиа запросы*/
+
+@media (max-width: 800px){
+    .main-menu ul{
+        justify-content: space-between;
+        gap: 15px;  
+    }
+
+    img{
+        width:500px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 600px){
+    h1{ 
+        text-align: center;
+    }
+
+    .main-menu ul{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-menu{
+        font-size: 21px;
+    }
+
+    a.active{
+        font-size: 23px;
+    }
+
+    img{
+        width:100%;
+        height: auto;
+    }
+
+    table{
+        font-size: 15px;
+    }
+
+}
+@media (max-width: 400px){
+    table{
+        font-size: 13px;
+    }
+
 }
