@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-weight:lighter;
+    font-style: italic;
+    color:rgb(162, 91, 56);
+}
+
+header{
+    background-color:rgb(249, 140, 86);
+    padding: 30px 0;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+} 
+
+.main-menu a{
+    color: white;
+    text-decoration: none;
+}
+
+.main-menu a.active{
+    color: rgb(162, 91, 56);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(162, 91, 56);
+    transition: 0.3s;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size:17px;
+    margin: 0;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+main{
+    padding: 30px 0;
+    flex-grow: 1;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.food-card{
+    display:flex;
+    flex-direction: column;
+    padding:40px; /* 30px непроставлено так как я хотел чтобы было красивей*/
+    border-radius: 35px;
+    background-color: white;  
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+}
+
+.food-card:hover{
+    outline:solid 2px rgb(249, 140, 86); /* цвет другой, чтобы подходил к другим ранее выбраным цветам*/
+}
+
+.food-card img{
+    width: 100%;
+    border-radius: 10px; /*сделал закругление меньше, чтобы оно выглядело красивее*/
+}
+
+.price{
+    font-size:20px;
+    margin-bottom: 5px;
+}
+
+.name{
+    font-size:20px;
+    margin-top: 0;
+    margin-bottom:auto;
+}
+
+.weight{
+    color:grey;
+}
+
+button{
+    background-color: #f1eee9;
+    font-weight: 700;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    width:100%;
+    margin-top: 30px;
+    padding: 10px 30px;
+    align-self: baseline;
+}
+
+.food-card:hover button{
+    background-color: #d3d3d3;
+}
+
+/* подвальчик */
+.footer{
+    padding: 10px 10px 10px 50px;
+    background-color: black;
+}
+
+.footer p{
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+}
+
+.footer a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+}
+
+.footer a:hover{
+    color:rgb(249, 140, 86);
+}
+
+/* медиа запросы*/
+@media (max-width: 800px){
+    .main-menu ul{
+        justify-content: space-between;
+        gap: 15px;
+        
+    }
+    
+}
+
+@media (max-width: 600px){
+    h1, h2{ 
+        text-align: center;
+    }
+
+    .main-menu ul{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-menu{
+        font-size: 21px;
+    }
+
+    a.active{
+        font-size: 23px;
+    }
+
+}
