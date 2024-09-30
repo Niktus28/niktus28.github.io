@@ -140,6 +140,11 @@ button{
 
 /* медиа запросы*/
 @media (max-width: 800px){
+   .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
     .main-menu ul{
         justify-content: space-between;
         gap: 15px;
@@ -166,4 +171,9 @@ button{
         font-size: 23px;
     }
 
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
 }
