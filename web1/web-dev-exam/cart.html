@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_cart.css">
+</head>
+
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="logo">Логотип</div>
+        <div class="header-icons">
+            <a href="index.html" class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                </svg>
+            </a>
+            <a href="lk.html" class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Контейнер для всех уведомлений -->
+    <div class="notifications-container">
+    </div>
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Блок корзины -->
+        <section class="cart">
+            <h1>Корзина</h1>
+            <div class="products-grid"></div>
+        </section>
+
+        <!-- Блок оформления заказа -->
+        <section class="checkout">
+            <h2>Оформление заказа</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" placeholder="Иванов Иван">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Номер телефона</label>
+                    <input type="text" id="phone" name="phone" placeholder="+74952230523">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@mospolytech.ru">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Подписаться на рассылку</label>
+                </div>
+                <div class="form-group">
+                    <label for="address">Адрес доставки</label>
+                    <input type="text" id="address" name="address" placeholder="ул. Большая Семёновская, 38">
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата доставки</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="form-group">
+                    <label for="time">Временной интервал доставки</label>
+                    <select id="time" name="time">
+                        <option value="08:00-12:00">08:00-12:00</option>
+                        <option value="12:00-14:00">12:00-14:00</option>
+                        <option value="14:00-18:00">14:00-18:00</option>
+                        <option value="18:00-22:00">18:00-22:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий</label>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Введите ваш комментарий"></textarea>
+                </div>
+                <div class="form-summary">
+                    <p>Итоговая стоимость: <strong>6500 ₽</strong></p>
+                    <p>(стоимость доставки <span>500 ₽</span>)</p>
+                </div>
+                <div class="form-actions">
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Оформить</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Название компании</p>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Логотип</div>
+        <input type="text" class="search-bar" placeholder="Введите запрос">
+        <div class="header-icons">
+            <a href="cart.html" class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+            </a>
+            <a href="lk.html" class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Контейнер для всех уведомлений -->
+    <div class="notifications-container">
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <aside class="sidebar">
+            <form class="filter-form">
+                <h3>Категории</h3>
+                <label><input type="checkbox"> Категория 1</label>
+                <label><input type="checkbox"> Категория 2</label>
+                <label><input type="checkbox"> Категория 3</label>
+                <label><input type="checkbox"> Категория 4</label>
+                <label><input type="checkbox"> Категория 5</label>
+
+                <h3>Стоимость</h3>
+                <label>От <input type="number" min="0" placeholder="100"></label>
+                <label>До <input type="number" min="0" placeholder="5000"></label>
+
+                <label><input type="checkbox"> Только товары со скидками</label>
+                <button type="submit" class="apply-button">Применить</button>
+            </form>
+        </aside>
+
+        <!-- Catalog -->
+        <section class="catalog">
+            <div class="catalog-header">
+                <h2>Каталог</h2>
+                <select class="sort-select">
+                    <option value="rating_desc">По убыванию рейтинга</option>
+                    <option value="rating_asc">По возрастанию рейтинга</option>
+                    <option value="price_desc">По убыванию цены</option>
+                    <option value="price_asc">По возрастанию цены</option>
+                </select>
+            </div>
+            <div class="products-grid"></div>
+            <button class="load-more">Загрузить ещё</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Название компании</p>
+    </footer>
+    <script src="js/goods_load.js"></script>
+</body>
+</html>
